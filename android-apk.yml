@@ -1,0 +1,40 @@
+name: Build THD Android pilot APK
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    env:
+      # Optional: if unset, the installer will request server URL on first use.
+      THD_API_BASE_URL: ${{ secrets.THD_API_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Check optional HTTPS default
+        shell: bash
+        run: |
+          if [[ -n "$THD_API_BASE_URL" && ! "$THD_API_BASE_URL" =~ ^https:// ]]; then
+            echo 'THD_API_BASE_URL must be an HTTPS address (or be left unset)'
+            exit 1
+          fi
+      - name: Generate Android scaffolding and app icon
+        working-directory: mobile
+        run: |
+          flutter create --platforms=android --project-name thd_student_discipline .
+          python3 ../scripts/prepare_android.py
+          flutter pub get
+          dart run flutter_launcher_icons
+          flutter analyze
+      - name: Build installable pilot APK (debug-signed)
+        working-directory: mobile
+        run: flutter build apk --debug "--dart-define=API_BASE_URL=$THD_API_BASE_URL"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: THD-Student-Discipline-Android-Pilot-APK
+          path: mobile/build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 7
