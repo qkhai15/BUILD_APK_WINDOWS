@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: thd
+      POSTGRES_USER: thd_app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U thd_app -d thd"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [private]
+  api:
+    build: ../backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://thd_app:${POSTGRES_PASSWORD}@db:5432/thd
+      JWT_SECRET: ${JWT_SECRET:?Set a 32+ character JWT_SECRET in .env}
+      THD_EVIDENCE_DIR: /service/private_evidence
+    volumes:
+      - evidence_data:/service/private_evidence
+    ports:
+      - '127.0.0.1:8000:8000'
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [private]
+volumes:
+  pg_data:
+  evidence_data:
+networks:
+  private:
+    internal: false

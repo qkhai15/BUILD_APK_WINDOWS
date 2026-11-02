@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123c63">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Quản lý nền nếp học sinh THPT Trần Hưng Đạo - Thanh Xuân">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="THĐ Nền nếp">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>THĐ – Quản lý nền nếp</title>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div id="loginScreen" class="login-stage">
+    <div class="login-card">
+      <div class="login-logos" aria-label="Nhận diện nhà trường">
+        <span class="brand-frame brand-frame-lg"><span class="brand-fallback" aria-hidden="true">THĐ</span><img data-brand-image src="./branding/logo-1.png" alt="Logo 1" loading="eager"></span>
+        <span class="brand-frame brand-frame-lg"><span class="brand-fallback" aria-hidden="true">★</span><img data-brand-image src="./branding/logo-2.png" alt="Logo 2" loading="eager"></span>
+      </div>
+      <div class="eyebrow">TRƯỜNG THPT TRẦN HƯNG ĐẠO – THANH XUÂN</div>
+      <h1>Quản lý nền nếp<br>học sinh</h1>
+      <p class="muted">Đăng nhập bằng tài khoản được nhà trường cấp để truy cập dữ liệu theo phân quyền.</p>
+      <form id="loginForm" autocomplete="on">
+        <label>Tài khoản<input id="username" name="username" autocomplete="username" required maxlength="80" placeholder="Tên đăng nhập"></label>
+        <label>Mật khẩu<input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Mật khẩu"></label>
+        <button id="loginButton" class="primary full" type="submit">Đăng nhập</button>
+      </form>
+      <p class="small muted">Dữ liệu nội bộ. Không chia sẻ tài khoản hoặc ảnh chụp thông tin học sinh.</p>
+    </div>
+  </div>
+  <div id="appShell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="sidebar-logos">
+        <span class="brand-frame"><span class="brand-fallback" aria-hidden="true">THĐ</span><img data-brand-image src="./branding/logo-1.png" alt="Logo 1"></span>
+        <span class="brand-frame"><span class="brand-fallback" aria-hidden="true">★</span><img data-brand-image src="./branding/logo-2.png" alt="Logo 2"></span>
+      </span><div><strong>Quản lý nền nếp</strong><small>THPT Trần Hưng Đạo</small></div></div>
+      <nav id="desktopNav" class="nav-list" aria-label="Điều hướng chính"></nav>
+      <div class="sidebar-foot"><div id="userInfo"></div><button id="logoutButton" class="text-button" type="button">Đăng xuất</button></div>
+    </aside>
+    <div class="content-area">
+      <header class="topbar">
+        <div class="topbar-identity">
+          <span class="topbar-logos" aria-label="Nhận diện nhà trường">
+            <span class="brand-frame brand-frame-sm"><span class="brand-fallback" aria-hidden="true">THĐ</span><img data-brand-image src="./branding/logo-1.png" alt="Logo 1"></span>
+            <span class="brand-frame brand-frame-sm"><span class="brand-fallback" aria-hidden="true">★</span><img data-brand-image src="./branding/logo-2.png" alt="Logo 2"></span>
+          </span>
+          <div><div class="topbar-eyebrow">THĐ STUDENT DISCIPLINE</div><h2 id="pageTitle">Trang chủ</h2></div>
+        </div>
+        <div class="header-actions"><span id="syncState" class="sync-state">Đã kết nối</span><button id="refreshBtn" type="button" class="secondary">↻ <span class="hide-small">Làm mới</span></button><button id="installBtn" type="button" class="secondary hidden">Cài ứng dụng</button></div>
+      </header>
+      <main id="pageContent" tabindex="-1" aria-live="polite"></main>
+    </div>
+    <nav id="bottomNav" class="bottom-nav" aria-label="Điều hướng trên điện thoại"></nav>
+  </div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <dialog id="detailDialog" class="detail-dialog"><button class="dialog-close" id="closeDialog" aria-label="Đóng" type="button">✕</button><div id="dialogContent"></div></dialog>
+</body>
+</html>

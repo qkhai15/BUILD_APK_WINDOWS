@@ -1,0 +1,9 @@
+# Sample reverse-proxy for the school's approved private domain and HTTPS certificate.
+# Deploy Caddy on the server/VPN; do not expose the API unauthenticated.
+# Replace the domain and certificate paths with school-approved values.
+thd.school.example {
+    tls /etc/caddy/certs/fullchain.pem /etc/caddy/certs/privkey.pem
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8000
+    header Cache-Control "no-store"
+}

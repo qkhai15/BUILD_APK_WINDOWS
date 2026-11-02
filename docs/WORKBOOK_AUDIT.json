@@ -1,0 +1,563 @@
+{
+  "school_year": "2026-2027",
+  "sheets_total": 58,
+  "class_sheets_total": 48,
+  "students": 2260,
+  "classes": 48,
+  "journal_real_records": 0,
+  "grade_counts": {
+    "10": 821,
+    "11": 770,
+    "12": 669
+  },
+  "class_counts": {
+    "10A01": 48,
+    "10A02": 50,
+    "10A1": 49,
+    "10A2": 49,
+    "10A3": 50,
+    "10A4": 50,
+    "10A5": 50,
+    "10A6": 52,
+    "10A7": 49,
+    "10D01": 49,
+    "10D02": 47,
+    "10D1": 48,
+    "10D2": 51,
+    "10D3": 47,
+    "10D4": 47,
+    "10D5": 42,
+    "10D6": 43,
+    "11A0": 48,
+    "11A1": 52,
+    "11A2": 53,
+    "11A3": 50,
+    "11A4": 47,
+    "11A5": 43,
+    "11A6": 46,
+    "11A7": 46,
+    "11D01": 41,
+    "11D02": 45,
+    "11D1": 47,
+    "11D2": 48,
+    "11D3": 46,
+    "11D4": 42,
+    "11D5": 39,
+    "11D6": 39,
+    "11D7": 38,
+    "12A0": 45,
+    "12A1": 47,
+    "12A2": 48,
+    "12A3": 48,
+    "12A4": 48,
+    "12A5": 45,
+    "12A6": 49,
+    "12D0": 45,
+    "12D1": 49,
+    "12D2": 50,
+    "12D3": 52,
+    "12D4": 44,
+    "12D5": 52,
+    "12D6": 47
+  },
+  "sheets": [
+    {
+      "name": "TRANG_CHU",
+      "dimension": "A1:J22",
+      "cells": 11,
+      "formulas": 0,
+      "nonformula_values": 11,
+      "validations": []
+    },
+    {
+      "name": "DULIEU_HOCSINH",
+      "dimension": "A1:F2265",
+      "cells": 13570,
+      "formulas": 0,
+      "nonformula_values": 13570,
+      "validations": []
+    },
+    {
+      "name": "CAU_HINH",
+      "dimension": "A1:H53",
+      "cells": 89,
+      "formulas": 0,
+      "nonformula_values": 89,
+      "validations": []
+    },
+    {
+      "name": "NHAP_LIEU",
+      "dimension": "A1:H16",
+      "cells": 19,
+      "formulas": 5,
+      "nonformula_values": 14,
+      "validations": [
+        {
+          "type": "list",
+          "sqref": "C6",
+          "formula1": "DanhSachLop"
+        },
+        {
+          "type": "list",
+          "sqref": "C7",
+          "formula1": "DanhSachMaHS"
+        },
+        {
+          "type": "list",
+          "sqref": "C11",
+          "formula1": "LoaiViPham"
+        }
+      ]
+    },
+    {
+      "name": "NHAT_KY_VI_PHAM",
+      "dimension": "A1:K5005",
+      "cells": 40015,
+      "formulas": 40000,
+      "nonformula_values": 15,
+      "validations": [
+        {
+          "type": "list",
+          "sqref": "B6:B5005",
+          "formula1": "DanhSachMaHS"
+        },
+        {
+          "type": "list",
+          "sqref": "I6:I5005",
+          "formula1": "LoaiViPham"
+        }
+      ]
+    },
+    {
+      "name": "TRA_CUU",
+      "dimension": "A1:H19",
+      "cells": 41,
+      "formulas": 18,
+      "nonformula_values": 23,
+      "validations": [
+        {
+          "type": "list",
+          "sqref": "B6",
+          "formula1": "DanhSachMaHS"
+        }
+      ]
+    },
+    {
+      "name": "DASHBOARD",
+      "dimension": "A1:P58",
+      "cells": 671,
+      "formulas": 592,
+      "nonformula_values": 126,
+      "validations": []
+    },
+    {
+      "name": "CANH_BAO",
+      "dimension": "A1:S2265",
+      "cells": 42963,
+      "formulas": 31640,
+      "nonformula_values": 17995,
+      "validations": []
+    },
+    {
+      "name": "BAO_CAO_TUAN",
+      "dimension": "A1:Q56",
+      "cells": 720,
+      "formulas": 638,
+      "nonformula_values": 176,
+      "validations": []
+    },
+    {
+      "name": "10A01",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "10A02",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "10A1",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "10A2",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "10A3",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "10A4",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "10A5",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "10A6",
+      "dimension": "A1:S59",
+      "cells": 1021,
+      "formulas": 731,
+      "nonformula_values": 440,
+      "validations": []
+    },
+    {
+      "name": "10A7",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "10D01",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "10D02",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "10D1",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "10D2",
+      "dimension": "A1:S58",
+      "cells": 1002,
+      "formulas": 717,
+      "nonformula_values": 432,
+      "validations": []
+    },
+    {
+      "name": "10D3",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "10D4",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "10D5",
+      "dimension": "A1:S49",
+      "cells": 831,
+      "formulas": 591,
+      "nonformula_values": 363,
+      "validations": []
+    },
+    {
+      "name": "10D6",
+      "dimension": "A1:S50",
+      "cells": 850,
+      "formulas": 605,
+      "nonformula_values": 371,
+      "validations": []
+    },
+    {
+      "name": "11A0",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "11A1",
+      "dimension": "A1:S59",
+      "cells": 1021,
+      "formulas": 731,
+      "nonformula_values": 440,
+      "validations": []
+    },
+    {
+      "name": "11A2",
+      "dimension": "A1:S60",
+      "cells": 1040,
+      "formulas": 745,
+      "nonformula_values": 448,
+      "validations": []
+    },
+    {
+      "name": "11A3",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "11A4",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "11A5",
+      "dimension": "A1:S50",
+      "cells": 850,
+      "formulas": 605,
+      "nonformula_values": 371,
+      "validations": []
+    },
+    {
+      "name": "11A6",
+      "dimension": "A1:S53",
+      "cells": 907,
+      "formulas": 647,
+      "nonformula_values": 395,
+      "validations": []
+    },
+    {
+      "name": "11A7",
+      "dimension": "A1:S53",
+      "cells": 907,
+      "formulas": 647,
+      "nonformula_values": 395,
+      "validations": []
+    },
+    {
+      "name": "11D01",
+      "dimension": "A1:S48",
+      "cells": 812,
+      "formulas": 577,
+      "nonformula_values": 355,
+      "validations": []
+    },
+    {
+      "name": "11D02",
+      "dimension": "A1:S52",
+      "cells": 888,
+      "formulas": 633,
+      "nonformula_values": 387,
+      "validations": []
+    },
+    {
+      "name": "11D1",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "11D2",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "11D3",
+      "dimension": "A1:S53",
+      "cells": 907,
+      "formulas": 647,
+      "nonformula_values": 395,
+      "validations": []
+    },
+    {
+      "name": "11D4",
+      "dimension": "A1:S49",
+      "cells": 831,
+      "formulas": 591,
+      "nonformula_values": 363,
+      "validations": []
+    },
+    {
+      "name": "11D5",
+      "dimension": "A1:S46",
+      "cells": 774,
+      "formulas": 549,
+      "nonformula_values": 339,
+      "validations": []
+    },
+    {
+      "name": "11D6",
+      "dimension": "A1:S46",
+      "cells": 774,
+      "formulas": 549,
+      "nonformula_values": 339,
+      "validations": []
+    },
+    {
+      "name": "11D7",
+      "dimension": "A1:S45",
+      "cells": 755,
+      "formulas": 535,
+      "nonformula_values": 331,
+      "validations": []
+    },
+    {
+      "name": "12A0",
+      "dimension": "A1:S52",
+      "cells": 888,
+      "formulas": 633,
+      "nonformula_values": 387,
+      "validations": []
+    },
+    {
+      "name": "12A1",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "12A4",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "12A2",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "12A3",
+      "dimension": "A1:S55",
+      "cells": 945,
+      "formulas": 675,
+      "nonformula_values": 411,
+      "validations": []
+    },
+    {
+      "name": "12A6",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "12A5",
+      "dimension": "A1:S52",
+      "cells": 888,
+      "formulas": 633,
+      "nonformula_values": 387,
+      "validations": []
+    },
+    {
+      "name": "12D0",
+      "dimension": "A1:S52",
+      "cells": 888,
+      "formulas": 633,
+      "nonformula_values": 387,
+      "validations": []
+    },
+    {
+      "name": "12D1",
+      "dimension": "A1:S56",
+      "cells": 964,
+      "formulas": 689,
+      "nonformula_values": 416,
+      "validations": []
+    },
+    {
+      "name": "12D2",
+      "dimension": "A1:S57",
+      "cells": 983,
+      "formulas": 703,
+      "nonformula_values": 424,
+      "validations": []
+    },
+    {
+      "name": "12D3",
+      "dimension": "A1:S59",
+      "cells": 1021,
+      "formulas": 731,
+      "nonformula_values": 440,
+      "validations": []
+    },
+    {
+      "name": "12D4",
+      "dimension": "A1:S51",
+      "cells": 869,
+      "formulas": 619,
+      "nonformula_values": 379,
+      "validations": []
+    },
+    {
+      "name": "12D5",
+      "dimension": "A1:S59",
+      "cells": 1021,
+      "formulas": 731,
+      "nonformula_values": 440,
+      "validations": []
+    },
+    {
+      "name": "12D6",
+      "dimension": "A1:S54",
+      "cells": 926,
+      "formulas": 661,
+      "nonformula_values": 403,
+      "validations": []
+    },
+    {
+      "name": "HUONG_DAN",
+      "dimension": "A1:H23",
+      "cells": 5,
+      "formulas": 0,
+      "nonformula_values": 5,
+      "validations": []
+    }
+  ],
+  "class_sheet_roster_counts_match": 48
+}
