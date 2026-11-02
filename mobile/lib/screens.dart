@@ -198,7 +198,11 @@ class _RecordScreenState extends State<RecordScreen> {
           style:const TextStyle(color:Colors.deepOrange))),
       gap,
       FilledButton.icon(onPressed:saving?null:save,icon:saving?const SizedBox(width:18,height:18,child:CircularProgressIndicator(strokeWidth:2)):const Icon(Icons.save),
-        label:Text(pendingViolationId!=null?'Tiếp tục gửi ảnh':'Lưu vi phạm${chosenPhotos.isNotEmpty?' kèm ảnh':''}'))),
+label: Text(
+  pendingViolationId != null
+      ? 'Tiếp tục gửi ảnh'
+      : 'Lưu vi phạm${chosenPhotos.isNotEmpty ? ' kèm ảnh' : ''}',
+)),
       const SizedBox(height:14),
       const Text('Khi gặp lỗi mạng sau khi nhấn Lưu, thử lại cùng màn hình; ứng dụng giữ khóa chống ghi trùng cho lần gửi này.',style:TextStyle(fontSize:12,color:Colors.black54)),
     ]);
